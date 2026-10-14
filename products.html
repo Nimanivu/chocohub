@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Chocolates | ChocoHub</title>
+    <meta name="description" content="Shop handmade chocolates, truffles, chocolate bars and gift boxes at ChocoHub.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <script src="products.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">♡</span>
+        <span>Choco<span class="logo-highlight">Hub</span>
+            <small>Homemade Chocolates</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active-link">Shop</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">
+        🛒 Cart <span id="cartCount">0</span>
+    </button>
+</header>
+
+<main>
+    <!-- Page banner -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <p class="eyebrow">A little happiness in every bite</p>
+            <h1>Our Chocolate <span>Collection</span></h1>
+            <p>Handcrafted with love, made for your sweetest moments.</p>
+            <a href="#shopProducts" class="btn btn-primary">Explore Our Treats ↓</a>
+        </div>
+        <div class="shop-hero-image">
+            <img src="https://www.istockphoto.com/photo/chocolate-assortment-background-top-view-of-different-kinds-of-chocolate-gm1276645382-376096164"
+                 alt="A tempting selection of chocolates">
+            <span class="shop-sticker">Sweetness<br>starts here ♡</span>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="shop-benefits">
+        <div>🍫 <span>Homemade goodness</span></div>
+        <div>🎀 <span>Beautiful gifting</span></div>
+        <div>♡ <span>Made with love</span></div>
+        <div>✨ <span>Sweeten every day</span></div>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop-section" id="shopProducts">
+        <div class="shop-heading">
+            <p class="eyebrow">Find your favourite</p>
+            <h2>Sweet Treats for <span>Every Mood</span></h2>
+            <p>From rich chocolate bars to thoughtful gift boxes.</p>
+        </div>
+
+        <div class="shop-tools">
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-category="All">All Treats</button>
+                <button class="filter-btn" data-category="Truffles">Truffles</button>
+                <button class="filter-btn" data-category="Chocolate Bars">Chocolate Bars</button>
+                <button class="filter-btn" data-category="Filled Chocolates">Filled Chocolates</button>
+                <button class="filter-btn" data-category="Gift Boxes">Gift Boxes</button>
+            </div>
+
+            <label class="search-box">
+                <span>⌕</span>
+                <input type="search" id="productSearch"
+                       placeholder="Find your chocolate..." aria-label="Search products">
+            </label>
+        </div>
+
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+        <div class="shop-product-grid" id="productGrid">
+            <!-- Products are inserted by products.js -->
+        </div>
+
+        <div class="empty-products" id="emptyProducts" hidden>
+            <span>🍫</span>
+            <h3>No chocolates found!</h3>
+            <p>Try another search or choose a different category.</p>
+        </div>
+    </section>
+
+    <!-- Custom orders -->
+    <section class="gift-banner">
+        <div class="gift-banner-icon">🎁</div>
+        <div>
+            <p class="eyebrow">Made for your special moments</p>
+            <h2>A Gift Box Full of <span>Love</span></h2>
+            <p>Birthdays, anniversaries, celebrations or just because.
+               Let's make your moments sweeter!</p>
+        </div>
+        <a href="index.html#contact" class="btn btn-light">Ask About Custom Orders →</a>
+    </section>
+</main>
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer"
+       role="dialog" aria-modal="true" aria-labelledby="cartTitle"
+       aria-hidden="true" inert>
+    <div class="cart-header">
+        <div>
+            <p class="eyebrow">Your sweet picks</p>
+            <h2 id="cartTitle">My Cart <span>♡</span></h2>
+        </div>
+        <button class="close-cart" id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+        <span>🛍️</span>
+        <h3>Your cart is waiting!</h3>
+        <p>Add some chocolate happiness.</p>
+        <button class="btn btn-primary" id="continueShopping">Explore Chocolates</button>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" hidden>
+        <div class="cart-total-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <p class="cart-disclaimer">Delivery charges, if any, are calculated separately.</p>
+        <button class="btn btn-primary checkout-btn" id="checkoutButton">
+            Continue to Enquiry →
+        </button>
+    </div>
+</aside>
+
+<!-- Order enquiry dialog -->
+<div class="order-modal" id="orderModal" role="dialog"
+     aria-modal="true" aria-labelledby="orderTitle" aria-hidden="true" inert>
+    <div class="order-modal-content">
+        <button class="close-cart modal-close" id="closeOrder"
+                aria-label="Close order enquiry">✕</button>
+        <p class="eyebrow">Almost time for chocolate!</p>
+        <h2 id="orderTitle">Order <span>Enquiry</span></h2>
+        <p>Your selected items will be included in the message.</p>
+
+        <form id="orderForm">
+            <label for="orderName">Your name</label>
+            <input id="orderName" name="name" required placeholder="Enter your name">
+
+            <label for="orderPhone">Phone number</label>
+            <input id="orderPhone" name="phone" type="tel"
+                   required placeholder="Enter your phone number">
+
+            <label for="orderAddress">Delivery address</label>
+            <textarea id="orderAddress" name="address" rows="2"
+                      required placeholder="Enter your delivery address"></textarea>
+
+            <button type="submit" class="btn btn-primary checkout-btn">
+                Prepare WhatsApp Enquiry →
+            </button>
+            <p class="form-note" id="orderNote" aria-live="polite"></p>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="index.html" class="logo footer-logo">
+        <span class="logo-icon">♡</span>
+        <span>Choco<span class="logo-highlight">Hub</span>
+            <small>Homemade Chocolates</small>
+        </span>
+    </a>
+
+    <p class="footer-slogan">Because life is better with chocolate. ♡</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <p class="copyright">© <span id="year"></span> ChocoHub. Made with love and chocolate.</p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+</body>
+</html>

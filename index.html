@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover delicious handmade chocolates at ChocoHub. Made with love, crafted for happiness.">
+    <title>ChocoHub | Homemade Chocolates</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">♡</span>
+            <span>Choco<span class="logo-highlight">Hub</span>
+                <small>Homemade Chocolates</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">About Us</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact">Contact Number</a>
+        </nav>
+
+        <a href="#products" class="nav-shop">Explore Chocolates ♡</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">♡ Handmade with love ♡</p>
+                <h1>Small Bites,<br> <span>Big Happiness!</span></h1>
+                <p class="hero-subtitle">A little chocolate, a lot of happiness.</p>
+                <p class="hero-description">
+                    Discover delicious homemade chocolates crafted with
+                    care, premium ingredients and lots of love.
+                </p>
+
+                <div class="hero-buttons">
+                    
+<a href="products.html" class="btn btn-primary">
+    Shop Chocolates →
+</a>
+
+                    <a href="#about" class="btn btn-secondary">Our Story</a>
+                </div>
+
+                <div class="hero-note">
+                    🍫 Homemade goodness in every bite!
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://media-public.canva.com/MADQ5mu7m64/1/screen.jpg"
+                    alt="Delicious assorted chocolates">
+                <div class="floating-note">Made with<br><strong>♡ Love ♡</strong></div>
+                <div class="hero-sticker">100%<br>Sweetness!</div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits" id="why-us">
+            <article class="benefit">
+                <span class="benefit-icon pink">♡</span>
+                <h3>Made with Love</h3>
+                <p>Handcrafted with care</p>
+            </article>
+            <article class="benefit">
+                <span class="benefit-icon yellow">✦</span>
+                <h3>Quality Ingredients</h3>
+                <p>Carefully selected ingredients</p>
+            </article>
+            <article class="benefit">
+                <span class="benefit-icon green">❀</span>
+                <h3>Freshly Prepared</h3>
+                <p>Delight in every bite</p>
+            </article>
+            <article class="benefit">
+                <span class="benefit-icon purple">🎁</span>
+                <h3>Perfect for Gifting</h3>
+                <p>Share a little happiness</p>
+            </article>
+        </section>
+
+        <!-- About -->
+        <section class="about section-padding" id="about">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=1000&q=85"
+                    alt="Chocolate treats prepared with care">
+                <span class="about-bubble">Sweet<br>moments<br>♡</span>
+            </div>
+
+            <div class="about-content">
+                <p class="eyebrow">A little about us</p>
+                <h2>Welcome to <span>ChocoHub!</span></h2>
+                <p>
+                    At ChocoHub, we believe chocolate is more than just a
+                    sweet treat — it's a way to share happiness.
+                </p>
+                <p>
+                    Every chocolate is made with care, creativity and a
+                    passion for creating sweet memories. Whether you're
+                    treating yourself or surprising someone special,
+                    there's always a little happiness waiting here.
+                </p>
+                <a href="#contact" class="btn btn-primary">Let's Connect →</a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="products section-padding" id="products">
+            <div class="section-heading">
+                <p class="eyebrow">A world of sweetness</p>
+                <h2>Our Special <span>Chocolates</span></h2>
+                <p>Find your favourite little piece of happiness.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=700&q=80"
+                        alt="Chocolate truffles">
+                    <div class="product-info">
+                        <span class="product-tag tag-pink">Customer favourite</span>
+                        <h3>Chocolate Truffles</h3>
+                        <p>Soft, rich and wonderfully chocolatey.</p>
+                        <a href="#contact" class="product-link"
+                           data-product="Chocolate Truffles">Enquire Now →</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80"
+                        alt="Chocolate bars">
+                    <div class="product-info">
+                        <span class="product-tag tag-green">Classic treat</span>
+                        <h3>Chocolate Bars</h3>
+                        <p>A classic chocolate treat for every mood.</p>
+                        <a href="#contact" class="product-link"
+                           data-product="Chocolate Bars">Enquire Now →</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=700&q=80"
+                        alt="Assorted handmade chocolates">
+                    <div class="product-info">
+                        <span class="product-tag tag-yellow">Little surprises</span>
+                        <h3>Filled Chocolates</h3>
+                        <p>Delicious bites with delightful centres.</p>
+                        <a href="#contact" class="product-link"
+                           data-product="Filled Chocolates">Enquire Now →</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80"
+                        alt="Beautiful gift packaging">
+                    <div class="product-info">
+                        <span class="product-tag tag-purple">Made for gifting</span>
+                        <h3>Gift Boxes</h3>
+                        <p>Beautiful chocolate gifts for special people.</p>
+                        <a href="#contact" class="product-link"
+                           data-product="Chocolate Gift Boxes">Enquire Now →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="custom-banner">
+                <div>
+                    <p class="eyebrow">Something special?</p>
+                    <h3>Your occasion, our chocolates! 🍫</h3>
+                    <p>Ask us about customised chocolate orders for birthdays,
+                       celebrations and thoughtful gifts.</p>
+                </div>
+                <a href="#contact" class="btn btn-light">Customise Your Order →</a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact section-padding" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">We'd love to hear from you</p>
+                <h2>Let's Make Life <span>Sweeter!</span></h2>
+                <p>Have a question or want to place an order? Send us a message.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <label for="customerName">Your name</label>
+                <input type="text" id="customerName"
+                       placeholder="Enter your name" required>
+
+                <label for="customerEmail">Email address</label>
+                <input type="email" id="customerEmail"
+                       placeholder="Enter your email" required>
+
+                <label for="customerMessage">Your message / order</label>
+                <textarea id="customerMessage" rows="4"
+                          placeholder="Tell us which chocolates you love..."
+                          required></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Prepare Message ♡
+                </button>
+                <p class="form-note" id="formNote" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">♡</span>
+            <span>Choco<span class="logo-highlight">Hub</span>
+                <small>Homemade Chocolates</small>
+            </span>
+        </a>
+
+        <p class="footer-slogan">Because life is better with chocolate. ♡</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">Our Story</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> ChocoHub.
+            Made with love and chocolate.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top"
+            aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
